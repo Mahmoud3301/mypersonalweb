@@ -1,0 +1,55 @@
+.projects_container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projects_container .portfolio_item{
+    width: 31%;
+    margin-bottom: 50px;
+    background: var(--color-bg-variant);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    text-align: center; /* يخلي كل المحتوى في النص */
+}
+
+.portfolio_item_img{
+    border-radius: 15px;
+    overflow: hidden;
+    height: 220px; /* ارتفاع موحد للصور */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio_item_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يظبط الصورة جوا الكارد */
+}
+
+.portfolio_item h3{
+    margin: 22px 0 25px;
+}
+
+.portfolio_item_btns{
+    display: flex;
+    justify-content: center; /* يخلي الزرار في النص */
+    margin-bottom: 15px;
+}
+
+/* Responsive*/
+
+@media (max-width:1024px){
+    .projects_container .portfolio_item{
+        width: 48%;
+    }
+}
+
+@media (max-width:600px){
+    .projects_container .portfolio_item{
+        width: 100%;
+    }
+}

@@ -1,0 +1,74 @@
+.contact_container{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap : 12%;
+}
+
+/* كل البوكسات عاملة عمود فوق بعض */
+.contact_options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* ✨ كل Article = بوكس مستقل */
+.contact_option{
+    background: var(--color-bg-variant);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition); 
+    max-width: 250px; /* يمنع البوكس من التمدد الكبير */
+}
+
+.contact_option:hover{
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+.contact_option svg{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact_option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+
+/* ✨ الإيميل يبان كامل بدون قص */
+.contact_info {
+    font-size: 0.9rem;
+    color: var(--color-white);
+    white-space: normal;   /* يسمح بالكسر */
+    word-wrap: break-word;  /* يقسم الكلمات الطويلة */
+    margin: 0.3rem 0;
+}
+
+/* ==== form ==== */
+.contact_container form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact_container form input,
+.contact_container form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+}
+
+.contact_container form button{
+    font-size: 18px;
+    padding: 14px 30px;
+    cursor: pointer;
+}

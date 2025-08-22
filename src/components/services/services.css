@@ -1,0 +1,70 @@
+.container_services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* مسافة بين الكروت */
+}
+
+.container_services .card {
+    width: 31%;
+    padding: 50px 40px;
+    background: var(--color-bg-variant);
+    border-radius: 1rem;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.container_services .card:hover {
+    background-color: var(--color-primary);
+    color: #000; /* 👈 النصوص تبقى أسود */
+}
+
+.container_services .icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.container_services .card:hover .icon {
+    color: #000; /* 👈 الأيقونة تبقى أسود */
+    transform: scale(1.1);
+}
+
+.container_services h3 {
+    margin-bottom: 20px;
+    color: var(--color-white);
+    transition: color 0.3s ease;
+}
+
+.container_services .card:hover h3 {
+    color: #000; /* 👈 العنوان يبقى أسود */
+}
+
+.container_services p {
+    font-size: 14px;
+    color: var(--color-light);
+    transition: color 0.3s ease;
+}
+
+.container_services .card:hover p {
+    color: #000; /* 👈 الوصف يبقى أسود */
+}
+
+/* Responsive */
+
+@media (max-width:1024px) {
+    .container_services .card {
+        width: 48%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width:600px) {
+    .container_services .card {
+        width: 100%;
+    }
+}

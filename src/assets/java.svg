@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Java style icon">
+  <rect width="128" height="128" rx="24" fill="#111827"/>
+  <g fill="none" stroke="#60A5FA" stroke-width="4" stroke-linecap="round">
+    <path d="M56 28 q8 8 0 16"/>
+    <path d="M72 28 q8 8 0 16"/>
+  </g>
+  <rect x="36" y="56" width="56" height="28" rx="6" fill="#E5E7EB" stroke="#93C5FD" stroke-width="3"/>
+  <path d="M92 60 h8 a8 8 0 0 1 0 16 h-8" fill="none" stroke="#93C5FD" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M36 88 q28 16 56 0" fill="none" stroke="#3B82F6" stroke-width="4"/>
+</svg>
