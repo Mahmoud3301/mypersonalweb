@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
-import './contact.css'
+import './contact.css';
 
-import { MdOutlineEmail } from 'react-icons/md'
-import { RiMessengerLine } from 'react-icons/ri'
-import { BsWhatsapp } from 'react-icons/bs'
+import { MdOutlineEmail } from 'react-icons/md';
+import { RiMessengerLine } from 'react-icons/ri';
+import { BsWhatsapp } from 'react-icons/bs';
 
 import emailjs from '@emailjs/browser';
 
@@ -33,7 +33,7 @@ const ContactData = [
 
 function Contact() {
   const form = useRef();
-  const [status, setStatus] = useState(""); // حالة الإرسال
+  const [status, setStatus] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ function Contact() {
       (result) => {
         console.log(result.text);
         setStatus("Message sent successfully!");
-        form.current.reset(); // إعادة ضبط الفورم بعد الإرسال
+        form.current.reset();
       },
       (error) => {
         console.log(error.text);
@@ -65,7 +65,7 @@ function Contact() {
 
       <div className="container contact_container">
         
-        {/* 👇 البوكسات منفصلة */}
+        {/* 👇 البوكسات */}
         <div className="contact_options">
           {ContactData.map(({ id, icon, title, info, link }) => (
             <article key={id} className='contact_option'>
