@@ -1,15 +1,14 @@
 {
   "name": "portfolio",
-  "homepage": "https://Mahmoud3301.github.io/Personal_website/",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://mahmoud3301.github.io/Personal_website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "lint": "eslint .",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
