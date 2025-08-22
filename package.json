@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://mahmoud3301.github.io/My_WebSite/",
+  "homepage": "https://mahmoud3301.github.io/myweb/",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/My_WebSite/',  // مهم جداً يكون نفس اسم الريبو
+  base: '/myweb/', // لازم يتطابق مع اسم الريبو
 })
