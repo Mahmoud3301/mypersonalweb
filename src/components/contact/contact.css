@@ -1,74 +1,112 @@
-.contact_container{
+.contact_container {
     width: 60%;
     display: grid;
     grid-template-columns: 30% 58%;
-    gap : 12%;
+    gap: 12%;
+    margin: auto; /* يوسّط الكونتينر */
 }
 
 /* كل البوكسات عاملة عمود فوق بعض */
-.contact_options{
+.contact_options {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
 /* ✨ كل Article = بوكس مستقل */
-.contact_option{
+.contact_option {
     background: var(--color-bg-variant);
-    padding: 1.2rem;
+    padding: 1.5rem;
     border-radius: 1.2rem;
     text-align: center;
     border: 1px solid transparent;
     transition: var(--transition); 
-    max-width: 250px; /* يمنع البوكس من التمدد الكبير */
+    min-width: 250px;    /* أقل عرض */
+    min-height: 200px;   /* أقل طول */
+    flex: 1;             /* كل الكروت تبقى متساوية */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.contact_option:hover{
+.contact_option:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
 }
 
-.contact_option svg{
+.contact_option svg {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-.contact_option a{
+.contact_option a {
     margin-top: 0.7rem;
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--color-primary);
 }
 
 /* ✨ الإيميل يبان كامل بدون قص */
 .contact_info {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-white);
     white-space: normal;   /* يسمح بالكسر */
-    word-wrap: break-word;  /* يقسم الكلمات الطويلة */
-    margin: 0.3rem 0;
+    word-wrap: break-word; /* يقسم الكلمات الطويلة */
+    margin: 0.4rem 0;
 }
 
 /* ==== form ==== */
-.contact_container form{
+.contact_container form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
 }
 
 .contact_container form input,
-.contact_container form textarea{
+.contact_container form textarea {
     width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
+    padding: 1.8rem; /* كبر البوكسات */
+    border-radius: 0.7rem;
     background: transparent;
     border: 2px solid var(--color-primary-variant);
     resize: none;
     color: var(--color-white);
+    font-size: 1rem;
 }
 
-.contact_container form button{
+.contact_container form textarea {
+    min-height: 180px; /* مساحة أكبر للرسالة */
+}
+
+.contact_container form button {
     font-size: 18px;
-    padding: 14px 30px;
+    padding: 16px 35px;
     cursor: pointer;
+}
+
+/* ✨✨ RESPONSIVE MEDIA QUERIES ✨✨ */
+@media screen and (max-width: 1024px) {
+  .contact_container {
+    width: 80%;
+    grid-template-columns: 1fr; /* يتحول لعمود واحد */
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact_container {
+    width: 90%;
+    grid-template-columns: 1fr; /* عمود واحد */
+    gap: 1.5rem;
+  }
+
+  .contact_option {
+    min-width: 100%; 
+    min-height: 180px; /* يخليهم نفس الطول برضه */
+  }
+
+  .contact_container form input,
+  .contact_container form textarea {
+    padding: 1.3rem;
+  }
 }
