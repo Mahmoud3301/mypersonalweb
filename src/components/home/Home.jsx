@@ -1,6 +1,5 @@
 import React from 'react'
 import Me from '../../assets/me1.png'
-import CV from '../../assets/Mahmoud_CV.pdf' // استيراد ملف الـ CV من src
 import './home.css'
 import HomeSocials from './HomeSocials'
 
@@ -13,11 +12,12 @@ function Home() {
         <h4 className='text-light'>AI Engineer</h4>
 
         <div className="btns">
-          {/* زر تحميل مضمون على أي جهاز */}
+          {/* فتح الملف في نافذة جديدة لتحميل مضمون */}
           <a
-            href={CV}
+            href="/Mahmoud_CV.pdf"
             className="btn"
-            download="Mahmoud_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Download CV
           </a>
