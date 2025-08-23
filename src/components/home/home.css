@@ -1,7 +1,7 @@
 :root {
     --color-primary: #FFD700; /* yellow */
     --color-white: #fff;
-    --color-black: #000;
+    --color-black: #2e2d2d;
     --color-bg: #121212;
     --color-bg-variant: #1E1E1E;
     --transition: all 0.3s ease;
