@@ -12,14 +12,14 @@ function Home() {
         <h4 className='text-light'>AI Engineer</h4>
 
         <div className="btns">
-          {/* عرض الـ CV مباشرة */}
+          {/* فتح الملف في نافذة جديدة لتحميل مضمون */}
           <a
             href="/Mahmoud_CV.pdf"
             className="btn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            View CV
+            Download CV
           </a>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
