@@ -2,7 +2,6 @@ import React from 'react'
 import Me from '../../assets/me1.png'
 import './home.css'
 import HomeSocials from './HomeSocials'
- 
 
 function Home() {
   return (
@@ -13,17 +12,23 @@ function Home() {
         <h4 className='text-light'>AI Engineer</h4>
 
         <div className="btns">
-          {/* هنا هيشتغل على أي جهاز */}
-          <a href="/Mahmoud_CV.pdf" className="btn" download>
-            Download CV
+          {/* عرض الـ CV مباشرة */}
+          <a
+            href="/Mahmoud_CV.pdf"
+            className="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View CV
           </a>
+
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
 
         <div className="me">
-          <img src={Me} alt="Me" />  
+          <img src={Me} alt="Me" />
         </div>
- 
+
         <a href="#about" className='scroll_down'>Scroll Down</a>
 
         <HomeSocials />
