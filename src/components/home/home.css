@@ -21,12 +21,12 @@ body {
 /* ===== Home Section ===== */
 .home_container {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 40px; /* قللت المسافة من الأعلى */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* النصوص فوق الصورة */
 }
 
 .home_container h4 {
@@ -48,7 +48,7 @@ body {
 .btns {
     display: flex;
     gap: 1rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     justify-content: center;
     flex-wrap: nowrap;
 }
@@ -86,11 +86,13 @@ body {
 /* ===== Me Image ===== */
 .home_container .me {
     width: 330px;
-    height: 440px;
+    max-width: 90%;
+    height: auto;
+    aspect-ratio: 3/4;
     background: linear-gradient(var(--color-primary), transparent);
     border-radius: 12rem 12rem 0 0;
-    margin: 40px auto;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    margin: 20px auto; /* أقل من قبل لتقريب الصورة للنصوص */
+    padding: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +101,7 @@ body {
 .home_container .me img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* يظهر الصورة كاملة بدون قص */
     border-radius: 12rem 12rem 0 0;
 }
 
@@ -195,20 +197,20 @@ body {
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
     .home_container {
-        padding-top: 60px;
+        padding-top: 30px;
     }
 
     .home_socials {
         display: none;
     }
 
-    .home h1 {
+    .home_container h1 {
         font-size: 2rem;
     }
 
     .home_container .me {
         width: 300px;
-        height: 380px;
+        height: auto;
     }
 
     .btns {
@@ -236,7 +238,7 @@ body {
 
     .home_container .me {
         width: 250px;
-        height: 320px;
+        height: auto;
     }
 }
 
