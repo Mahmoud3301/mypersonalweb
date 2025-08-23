@@ -1,7 +1,8 @@
 .about_container{
     display: grid;
     grid-template-columns: 35% 50%;
-    gap: 15%
+    gap: 15%;
+    align-items: start;
 }
 
 .about_me{
@@ -16,7 +17,6 @@
     border-radius: 15rem;
     overflow: hidden;
     transition: var(--transition);
-
 }
 
 .about_me_image:hover{
@@ -61,9 +61,10 @@
 .about_content p{
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    line-height: 1.6;
 }
 
-/* Resoponsive*/
+/* Responsive */
 
 @media (max-width: 1024px){
    .about_container{
@@ -76,12 +77,11 @@
     margin: 2rem auto 4rem;
    }
 
-   .about_container p{
+   .about_content p{
     margin: 1rem 0 1.5rem;
    }
 
 }
-
 
 @media (max-width: 600px){
    .about_me{
@@ -90,16 +90,15 @@
    }
 
    .about_cards{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* كل كارد في سطر */
     gap: 1rem;
    }
 
    .about_content{
-    text-align: center;
+    text-align: left; /* خلي البراجراف يبقى منسق من الحافة */
    }
 
    .about_content p{
     margin: 1.5rem 0;
    }
-
 }
