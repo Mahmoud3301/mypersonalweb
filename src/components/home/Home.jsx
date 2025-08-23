@@ -1,8 +1,8 @@
 import React from 'react'
 import Me from '../../assets/me1.png'
+import CV from '../../assets/Mahmoud_CV.pdf' // استيراد ملف الـ CV من src
 import './home.css'
 import HomeSocials from './HomeSocials'
- 
 
 function Home() {
   return (
@@ -13,17 +13,22 @@ function Home() {
         <h4 className='text-light'>AI Engineer</h4>
 
         <div className="btns">
-          {/* هنا هيشتغل على أي جهاز */}
-          <a href="/Mahmoud_CV.pdf" className="btn" download>
+          {/* زر تحميل مضمون على أي جهاز */}
+          <a
+            href={CV}
+            className="btn"
+            download="Mahmoud_CV.pdf"
+          >
             Download CV
           </a>
+
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
         </div>
 
         <div className="me">
-          <img src={Me} alt="Me" />  
+          <img src={Me} alt="Me" />
         </div>
- 
+
         <a href="#about" className='scroll_down'>Scroll Down</a>
 
         <HomeSocials />
