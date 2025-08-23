@@ -5,8 +5,8 @@ import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
 function Footer() {
   return (
     <footer>
-      {/* شعارك أو اسمك */}
-      <a href="#" className='footer_logo'>Mahmoud Saeed</a>
+      {/* اسمك ثابت */}
+      <span className='footer_logo'>Mahmoud Saeed</span>
 
       {/* روابط الأقسام */}
       <ul className='permalinks'>
@@ -33,7 +33,7 @@ function Footer() {
 
       {/* حقوق النشر */}
       <div className="footer_copyright">
-        <small>&copy; <a href="#">Mahmoud Saeed</a> All rights reserved</small>
+        <small>&copy; Mahmoud Saeed All rights reserved</small>
       </div>
     </footer>
   )

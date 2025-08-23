@@ -1,32 +1,53 @@
 footer{
-    background: #1E1E1E; /* خلفية أفتح */
-    padding: 40px 0;
+    background: #1E1E1E;
+    padding: 40px 20px;
     text-align: center;
     font-size: 14px;
-    color: #f5f5f5; /* نص أبيض أفتح */
+    color: #f5f5f5;
     margin-top: 100px;
-}
-
-footer a{
-    color: #f5f5f5; /* روابط أفتح */
-    text-decoration: none;
 }
 
 .footer_logo{
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 30px;
     display: inline-block;
+    color: #ffffff; /* لون ثابت للشعار */
 }
 
 .permalinks{
     display: flex;
-    flex-direction: column; /* عمودي */
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin: 0 auto 30px;
     list-style: none;
+}
+
+.permalinks li a{
+    color: #f5f5f5;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.permalinks li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #FFD700;
+    transition: 0.3s;
+}
+
+.permalinks li a:hover{
+    color: #FFD700;
+}
+
+.permalinks li a:hover::after{
+    width: 100%;
 }
 
 .footer_socials{
@@ -37,25 +58,39 @@ footer a{
 }
 
 .footer_socials a{
-    background: #eee; /* خلفية فاتحة للأيقونات */
-    color: #2c2c2c;   /* أيقونات بلون الخلفية الداكنة */
+    background: #eee;
+    color: #2c2c2c;
     padding: 12px;
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     font-size: 18px;
 }
 
 .footer_socials a:hover{
-    background: transparent;
-    border-color: #f5f5f5;
-    color: #f5f5f5;
+    background: #FFD700;
+    color: #1E1E1E;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+    border-color: #FFD700;
 }
 
 .footer_copyright{
     margin-top: 2rem;
-    color: #f5f5f5; /* نص أفتح */
+    color: #f5f5f5;
+    font-size: 13px;
+}
+
+/* تحسينات للهواتف */
+@media (max-width: 600px){
+    .permalinks{
+        gap: 10px;
+    }
+    .footer_socials a{
+        padding: 10px;
+        font-size: 16px;
+    }
 }
