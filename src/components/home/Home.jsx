@@ -56,7 +56,7 @@ function Home() {
         <p className="download-msg">
           If you want to download my CV, visit my{' '}
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile/"
+            href="https://www.linkedin.com/in/mahmoud-mansour-928623252/"
             target="_blank"
             rel="noopener noreferrer"
           >
