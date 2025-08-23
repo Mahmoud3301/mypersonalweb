@@ -1,7 +1,7 @@
 :root {
     --color-primary: #FFD700; /* yellow */
     --color-white: #fff;
-    --color-black: #272525;
+    --color-black: #000;
     --color-bg: #121212;
     --color-bg-variant: #1E1E1E;
     --transition: all 0.3s ease;
@@ -15,7 +15,7 @@ body {
     background-color: var(--color-bg);
     color: var(--color-white);
     scroll-behavior: smooth;
-    overflow-x: hidden; /* remove horizontal scroll */
+    overflow-x: hidden;
 }
 
 /* ===== Home Section ===== */
@@ -47,39 +47,40 @@ body {
 /* ===== Buttons ===== */
 .btns {
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem;
     margin-top: 2.5rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .btn {
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 2.5rem;
+    width: 160px;
+    text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 1rem;
     cursor: pointer;
     font-weight: 500;
     transition: var(--transition);
     text-decoration: none;
+    display: inline-block;
 }
 
-/* Black button */
+/* Buttons colors */
 .btn-black {
     background-color: var(--color-black);
     color: var(--color-white);
 }
 
-.btn-black:hover {
-    background-color: #333;
-}
-
-/* Yellow button */
 .btn-yellow {
     background-color: var(--color-primary);
     color: var(--color-black);
 }
 
-.btn-yellow:hover {
-    background-color: #ffdd33;
+/* Hover effect for both buttons */
+.btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
 }
 
 /* ===== Me Image ===== */
@@ -144,14 +145,14 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap; /* move to next line if needed */
+    flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 100%; /* prevent horizontal scroll */
+    max-width: 100%;
 }
 
 .cv-card {
     background-color: var(--color-bg-variant);
-    border-radius: 12px;
+    border-radius: 1rem;
     padding: 1rem;
     width: 300px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -171,7 +172,7 @@ body {
 
 .cv-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 1rem;
     display: block;
 }
 
@@ -211,8 +212,7 @@ body {
     }
 
     .btns {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
     }
 }
 
@@ -237,5 +237,14 @@ body {
     .home_container .me {
         width: 250px;
         height: 320px;
+    }
+}
+
+/* ===== Mobile buttons vertical ===== */
+@media (max-width: 480px) {
+    .btns {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
     }
 }
