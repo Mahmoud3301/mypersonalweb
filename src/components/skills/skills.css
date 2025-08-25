@@ -15,14 +15,15 @@
     border-radius: 12px;
     margin-bottom: 20px;
     background-color: var(--color-bg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
+    transition: background-color 0.3s ease; /* بس تغيير لون بسيط */
+    cursor: default; /* مش pointer */
 }
 
+/* hover بسيط يغير اللون فقط */
 .container_skills .card_skill:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     background-color: var(--color-bg-variant);
+    box-shadow: none;
+    transform: none;
 }
 
 .container_skills .card_skill .icon{
@@ -34,8 +35,9 @@
     transition: transform 0.3s ease;
 }
 
+/* تأثير خفيف على الأيقونة */
 .container_skills .card_skill:hover .icon{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .container_skills .card_skill h4{
