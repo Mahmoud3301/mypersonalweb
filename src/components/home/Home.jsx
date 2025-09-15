@@ -53,6 +53,18 @@ function Home() {
           </div>
         </div>
 
+        {/* Download Button */}
+        <div className="download-btn">
+          <a 
+            href="https://drive.google.com/file/d/1UjO_7MZ0eroe9cMGRLj0Muhh5sJi2Ulm/view?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-black"
+          >
+            Download CV
+          </a>
+        </div>
+
         <p className="download-msg">
           If you want to download my CV, visit my{' '}
           <a
