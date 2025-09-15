@@ -24,7 +24,7 @@ function About() {
           <div className="about_cards">
             <div className="about_card">
               <FaAward className='about_icon' />
-              <h5>Senior AI Engineering Student</h5>
+              <h5>Junior AI Engineering and Student</h5>
               <small>2+ years experience</small>
             </div>
 
