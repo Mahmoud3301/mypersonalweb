@@ -6,6 +6,8 @@ import IMG3 from '../../assets/seg.png'
 import IMG4 from '../../assets/object.jpeg'
 import IMG5 from '../../assets/sign.jpeg'
 import IMG6 from '../../assets/traffic.jpeg'
+import IMG7 from '../../assets/travel.png'
+import IMG8 from '../../assets/emotion.png'
 
 const portfolioData = [
   {
@@ -43,6 +45,18 @@ const portfolioData = [
     image: IMG6,
     title: 'Traffic Light Detection',
     github: 'https://github.com/Mahmoud3301/traffic_light/tree/main'
+  },
+  {
+    id: 7,
+    image: IMG7,
+    title: 'TravelPlanner Chatbot',
+    github: 'https://github.com/Mahmoud3301/Travel_Planner_chatbot'
+  },
+  {
+    id: 8,
+    image: IMG8,
+    title: 'EmpathyBot',
+    github: 'https://github.com/Mahmoud3301/empathybot-Mahmoud'
   }
 ];
 
