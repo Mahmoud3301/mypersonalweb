@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
-    align-items: start;
+    align-items: center; /* الصورة تبقى في النص */
 }
 
 .about_me{
@@ -10,13 +10,27 @@
     aspect-ratio: 1/1;
     border-radius: 2rem;
     background: linear-gradient(45deg , transparent , var(--color-primary),transparent);
+
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
 }
 
 .about_me_image{
+    width: 90%;
+    height: 90%;
     transform: rotate(10deg);
     border-radius: 15rem;
     overflow: hidden;
     transition: var(--transition);
+    margin-top: -20px; /* رفع الصورة لفوق */
+}
+
+.about_me_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15rem;
 }
 
 .about_me_image:hover{
@@ -36,6 +50,11 @@
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+
+    min-height: 180px; /* يثبت ارتفاع الكارد */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about_card:hover{
@@ -73,29 +92,28 @@
    } 
 
    .about_me{
-    width: 50%;
+    width: 60%; /* حجم أكبر على التابلت */
     margin: 2rem auto 4rem;
    }
 
    .about_content p{
     margin: 1rem 0 1.5rem;
    }
-
 }
 
 @media (max-width: 600px){
    .about_me{
-    width: 65%;
+    width: 80%; /* الصورة تملأ أكتر على الموبايل */
     margin: 0rem auto 3rem;
    }
 
    .about_cards{
-    grid-template-columns: 1fr; /* كل كارد في سطر */
+    grid-template-columns: 1fr; 
     gap: 1rem;
    }
 
    .about_content{
-    text-align: left; /* خلي البراجراف يبقى منسق من الحافة */
+    text-align: left; 
    }
 
    .about_content p{
