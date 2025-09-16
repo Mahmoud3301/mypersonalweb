@@ -55,10 +55,10 @@ function Home() {
 
         {/* Download Button */}
         <div className="download-btn">
-          <a 
-            href="https://drive.google.com/file/d/1UjO_7MZ0eroe9cMGRLj0Muhh5sJi2Ulm/view?usp=sharing" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://drive.google.com/file/d/1UjO_7MZ0eroe9cMGRLj0Muhh5sJi2Ulm/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-black"
           >
             Download CV
@@ -66,15 +66,25 @@ function Home() {
         </div>
 
         <p className="download-msg">
-          If you want to download my CV, visit my{' '}
+          If you want to visit my{' '}
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile/"
+            href="https://www.linkedin.com/in/mahmoud-mansour-928623252/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
-          </a>.
+          </a>{' '}
+          to see my skills and{' '}
+          <a
+            href="https://github.com/Mahmoud3301"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>{' '}
+          to see my projects.
         </p>
+
       </div>
     </div>
   )
