@@ -9,6 +9,8 @@ import IMG6 from '../../assets/traffic.jpeg'
 import IMG7 from '../../assets/travel.png'
 import IMG8 from '../../assets/emotion.png'
 import IMG9 from '../../assets/car_plate.jpg'
+import IMG10 from '../../assets/filters.png'
+import IMG11 from '../../assets/parking.png'
 
 const portfolioData = [
   {
@@ -64,6 +66,18 @@ const portfolioData = [
     image: IMG9,
     title: 'Car Plate speed open ai',
     github: 'https://github.com/Mahmoud3301/Car_Plate_speed_detection_open_ai'
+  },
+  {
+    id: 10,
+    image: IMG10,
+    title: 'Image Filters',
+    github: 'https://github.com/Mahmoud3301/Image_Filters'
+  },
+  {
+    id: 11,
+    image: IMG11,
+    title: 'Car Parking',
+    github: 'https://github.com/Mahmoud3301/Car_Parking'
   }
 ];
 
