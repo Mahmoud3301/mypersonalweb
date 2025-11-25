@@ -8,6 +8,7 @@ import IMG5 from '../../assets/sign.jpeg'
 import IMG6 from '../../assets/traffic.jpeg'
 import IMG7 from '../../assets/travel.png'
 import IMG8 from '../../assets/emotion.png'
+import IMG9 from '../../assets/car_plate.jpg'
 
 const portfolioData = [
   {
@@ -57,6 +58,12 @@ const portfolioData = [
     image: IMG8,
     title: 'EmpathyBot',
     github: 'https://github.com/Mahmoud3301/empathybot-Mahmoud'
+  },
+  {
+    id: 9,
+    image: IMG9,
+    title: 'Car Plate speed open ai',
+    github: 'https://github.com/Mahmoud3301/Car_Plate_speed_detection_open_ai'
   }
 ];
 
