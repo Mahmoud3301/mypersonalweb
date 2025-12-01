@@ -83,7 +83,7 @@ const portfolioData = [
   {
     id: 12,
     image: IMG12,
-    title: 'Car Parking',
+    title: 'Bitcoin Prediction',
     github: 'https://github.com/Mahmoud3301/Bitcoin_prediction'
   }
 ];
