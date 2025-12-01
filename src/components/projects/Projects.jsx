@@ -11,6 +11,7 @@ import IMG8 from '../../assets/emotion.png'
 import IMG9 from '../../assets/car_plate.jpg'
 import IMG10 from '../../assets/filters.png'
 import IMG11 from '../../assets/parking.png'
+import IMG12 from '../../assets/bitcoin.png'
 
 const portfolioData = [
   {
@@ -78,6 +79,12 @@ const portfolioData = [
     image: IMG11,
     title: 'Car Parking',
     github: 'https://github.com/Mahmoud3301/Car_Parking'
+  },
+  {
+    id: 12,
+    image: IMG12,
+    title: 'Car Parking',
+    github: 'https://github.com/Mahmoud3301/Bitcoin_prediction'
   }
 ];
 
