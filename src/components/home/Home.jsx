@@ -2,6 +2,7 @@ import React from 'react'
 import Me from '../../assets/me1.png'
 import CVPage1 from '../../assets/cv1.png'
 import CVPage2 from '../../assets/cv2.png'
+import CVPage3 from '../../assets/cv3.png'
 import './home.css'
 import HomeSocials from './HomeSocials'
 
@@ -51,12 +52,16 @@ function Home() {
             <h3>Page 2</h3>
             <img src={CVPage2} alt="CV Page 2" />
           </div>
+          <div className="cv-card" onClick={() => openImage(CVPage3)}>
+            <h3>Page 3</h3>
+            <img src={CVPage3} alt="CV Page 3" />
+          </div>
         </div>
 
         {/* Download Button */}
         <div className="download-btn">
           <a
-            href="https://drive.google.com/file/d/1UjO_7MZ0eroe9cMGRLj0Muhh5sJi2Ulm/view?usp=sharing"
+            href="https://drive.google.com/file/d/110u61oRrM64G2kblgUToNPoIMKmuDmif/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-black"
