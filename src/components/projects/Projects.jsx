@@ -12,7 +12,9 @@ import IMG9 from '../../assets/car_plate.jpg'
 import IMG10 from '../../assets/filters.png'
 import IMG11 from '../../assets/parking.png'
 import IMG12 from '../../assets/bitcoin.png'
-
+import IMG13 from '../../assets/gender.png'
+import IMG14 from '../../assets/cancer.png'
+import IMG15 from '../../assets/the_guardian.png'
 const portfolioData = [
   {
     id: 1,
@@ -85,6 +87,24 @@ const portfolioData = [
     image: IMG12,
     title: 'Bitcoin Prediction',
     github: 'https://github.com/Mahmoud3301/Bitcoin_prediction'
+  },
+  {
+    id: 13,
+    image: IMG13,
+    title: 'Gender Prediction',
+    github: 'https://github.com/Mahmoud3301/Gender_Identification'
+  },
+  {
+    id: 14,
+    image: IMG14,
+    title: 'Cancer Prediction',
+    github: 'https://github.com/Mahmoud3301/Bioinformatics_cancer_DNA'
+  },
+  {
+    id: 15,
+    image: IMG15,
+    title: 'The Guardian',
+    github: 'https://github.com/Mahmoud3301/The_Guardian_app'
   }
 ];
 

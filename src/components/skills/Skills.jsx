@@ -1,7 +1,7 @@
 import React from 'react';
 import './skills.css';
 import PYTHON from '../../assets/python.svg';
-import FLUTTER from '../../assets/flutter.svg';
+import FLUTTER from '../../assets/Flutter.svg';
 import FIGMA from '../../assets/figma.svg';
 import JAVA from '../../assets/java.svg';
 import NLP from '../../assets/nlp.svg';
