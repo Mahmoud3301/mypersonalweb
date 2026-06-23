@@ -6,7 +6,7 @@ import Contact from './components/contact/Contact'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Footer from './components/footer/Footer'
-import Services from './components/services/services'
+import Services from './components/services/Services'
 function App() {
   return (
     <>

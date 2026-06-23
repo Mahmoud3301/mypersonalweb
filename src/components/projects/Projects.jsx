@@ -6,7 +6,15 @@ import IMG3 from '../../assets/seg.png'
 import IMG4 from '../../assets/object.jpeg'
 import IMG5 from '../../assets/sign.jpeg'
 import IMG6 from '../../assets/traffic.jpeg'
-
+import IMG7 from '../../assets/travel.png'
+import IMG8 from '../../assets/emotion.png'
+import IMG9 from '../../assets/car_plate.jpg'
+import IMG10 from '../../assets/filters.png'
+import IMG11 from '../../assets/parking.png'
+import IMG12 from '../../assets/bitcoin.png'
+import IMG13 from '../../assets/gender.png'
+import IMG14 from '../../assets/cancer.png'
+import IMG15 from '../../assets/the_guardian.png'
 const portfolioData = [
   {
     id: 1,
@@ -43,6 +51,60 @@ const portfolioData = [
     image: IMG6,
     title: 'Traffic Light Detection',
     github: 'https://github.com/Mahmoud3301/traffic_light/tree/main'
+  },
+  {
+    id: 7,
+    image: IMG7,
+    title: 'TravelPlanner Chatbot',
+    github: 'https://github.com/Mahmoud3301/Travel_Planner_chatbot'
+  },
+  {
+    id: 8,
+    image: IMG8,
+    title: 'EmpathyBot',
+    github: 'https://github.com/Mahmoud3301/empathybot-Mahmoud'
+  },
+  {
+    id: 9,
+    image: IMG9,
+    title: 'Car Plate speed open ai',
+    github: 'https://github.com/Mahmoud3301/Car_Plate_speed_detection_open_ai'
+  },
+  {
+    id: 10,
+    image: IMG10,
+    title: 'Image Filters',
+    github: 'https://github.com/Mahmoud3301/Image_Filters'
+  },
+  {
+    id: 11,
+    image: IMG11,
+    title: 'Car Parking',
+    github: 'https://github.com/Mahmoud3301/Car_Parking'
+  },
+  {
+    id: 12,
+    image: IMG12,
+    title: 'Bitcoin Prediction',
+    github: 'https://github.com/Mahmoud3301/Bitcoin_prediction'
+  },
+  {
+    id: 13,
+    image: IMG13,
+    title: 'Gender Prediction',
+    github: 'https://github.com/Mahmoud3301/Gender_Identification'
+  },
+  {
+    id: 14,
+    image: IMG14,
+    title: 'Cancer Prediction',
+    github: 'https://github.com/Mahmoud3301/Bioinformatics_cancer_DNA'
+  },
+  {
+    id: 15,
+    image: IMG15,
+    title: 'The Guardian',
+    github: 'https://github.com/Mahmoud3301/The_Guardian_app'
   }
 ];
 
