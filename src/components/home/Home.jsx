@@ -61,7 +61,7 @@ function Home() {
         {/* Download Button */}
         <div className="download-btn">
           <a
-            href="https://drive.google.com/file/d/110u61oRrM64G2kblgUToNPoIMKmuDmif/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1UjO_7MZ0eroe9cMGRLj0Muhh5sJi2Ulm/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-black"
