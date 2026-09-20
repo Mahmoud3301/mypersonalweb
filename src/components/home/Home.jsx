@@ -61,7 +61,7 @@ function Home() {
         {/* Download Button */}
         <div className="download-btn">
           <a
-            href="https://drive.google.com/file/d/110u61oRrM64G2kblgUToNPoIMKmuDmif/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1FiKwaO3FwDv1zRKuK0_yveq4aeed_sJ2/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-black"
@@ -73,7 +73,7 @@ function Home() {
         <p className="download-msg">
           If you want to visit my{' '}
           <a
-            href="https://www.linkedin.com/in/mahmoud-mansour-928623252/"
+            href="https://www.linkedin.com/in/mahmoud-saeed-928623252/"
             target="_blank"
             rel="noopener noreferrer"
           >

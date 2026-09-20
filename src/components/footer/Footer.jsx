@@ -26,7 +26,7 @@ function Footer() {
         <a href="https://github.com/Mahmoud3301" target='_blank' rel="noreferrer">
           <FaGithub />
         </a>
-        <a href="https://www.linkedin.com/in/mahmoud-mansour-928623252/" target='_blank' rel="noreferrer">
+        <a href="https://www.linkedin.com/in/mahmoud-saeed-928623252/" target='_blank' rel="noreferrer">
           <FaLinkedin />
         </a>
       </div>

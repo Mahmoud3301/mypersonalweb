@@ -105,6 +105,12 @@ const portfolioData = [
     image: IMG15,
     title: 'The Guardian',
     github: 'https://github.com/Mahmoud3301/The_Guardian_app'
+  },
+  {
+    id: 16,
+    image: IMG4, // Reusing IMG4 since PPE is object detection
+    title: 'PPE Safety System',
+    github: 'https://github.com/Mahmoud3301/ppe-safety-system'
   }
 ];
 
