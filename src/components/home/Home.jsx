@@ -73,7 +73,7 @@ function Home() {
         <p className="download-msg">
           If you want to visit my{' '}
           <a
-            href="https://www.linkedin.com/in/mahmoud-saeed-928623252/"
+            href="https://www.linkedin.com/in/mahmoud-saeed-928623252"
             target="_blank"
             rel="noopener noreferrer"
           >

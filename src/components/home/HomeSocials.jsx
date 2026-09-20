@@ -6,7 +6,7 @@ function HomeSocials() {
   return (
     <div className='home_socials'>
       <a 
-        href="https://www.linkedin.com/in/mahmoud-saeed-928623252/" 
+        href="https://www.linkedin.com/in/mahmoud-saeed-928623252" 
         target='_blank' 
         rel="noopener noreferrer"
       >
