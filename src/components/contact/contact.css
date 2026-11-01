@@ -18,42 +18,157 @@
   border-radius: 1.2rem;
   text-align: center;
   border: 1px solid transparent;
-  transition: var(--transition); 
+  transition: var(--transition);
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 0.3rem;
+}
+
+.contact_option:hover {
+  border-color: var(--color-primary);
+}
+
+.contact_icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.contact_option h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact_option a {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.contact_option a:hover {
+  color: #fff;
 }
 
 .contact_info {
-  font-size: 1rem;
-  color: var(--color-white);
-  word-break: break-word; /* 🟢 يمنع قص الإيميل */
-  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  word-break: break-word;
+  margin: 0.2rem 0;
 }
 
+/* ─── Form ─────────────────────────────────────────────────────── */
 .contact_container form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.2rem;
 }
 
 .contact_container form input,
 .contact_container form textarea {
   width: 100%;
-  padding: 1.3rem;
+  padding: 1.2rem;
   border-radius: 0.7rem;
   background: transparent;
-  border: 2px solid var(--color-primary-variant);
+  border: 2px solid rgba(255, 215, 0, 0.3);
   color: var(--color-white);
   font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.contact_container form input:focus,
+.contact_container form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.contact_container form input:disabled,
+.contact_container form textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .contact_container form textarea {
   min-height: 150px;
+  resize: vertical;
 }
 
-/* ✅ Responsive */
+/* ─── Submit button ─────────────────────────────────────────────── */
+.contact_container form .btn-primary {
+  background: var(--color-primary);
+  color: var(--color-black);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact_container form .btn-primary:hover:not(:disabled) {
+  background: #fff;
+  color: var(--color-black);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.contact_container form .btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Loading spinner ───────────────────────────────────────────── */
+.sending-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--color-black);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Status messages ────────────────────────────────────────────── */
+.status_message {
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.status_success {
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  color: #4ade80;
+}
+
+.status_error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: #f87171;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
 @media screen and (max-width: 1024px) {
   .contact_container {
     width: 80%;
@@ -71,12 +186,12 @@
 
   .contact_option {
     min-width: 100%;
-    text-align: left; /* 🟢 يخليها أوضح على الموبايل */
+    text-align: left;
     padding: 1rem;
   }
 
   .contact_container form button {
-    width: 100%; /* 🟢 الزرار ياخد العرض كله */
+    width: 100%;
   }
 }
 
@@ -90,6 +205,6 @@
   }
 
   .contact_info {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
   }
 }

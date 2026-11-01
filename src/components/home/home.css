@@ -278,3 +278,57 @@ body {
         align-items: center;
     }
 }
+
+/* ===== CV Hint ===== */
+.cv-hint {
+    color: #aaa;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Lightbox ===== */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 1rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+    object-fit: contain;
+    cursor: default;
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 1rem;
+    right: 1.2rem;
+    background: var(--color-primary);
+    color: var(--color-black);
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
