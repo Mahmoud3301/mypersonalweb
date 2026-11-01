@@ -166,6 +166,42 @@
   background: rgba(239, 68, 68, 0.12);
   border: 1px solid rgba(239, 68, 68, 0.35);
   color: #f87171;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.status_error p {
+  margin: 0;
+}
+
+/* Mailto fallback button inside error box */
+.mailto_fallback_btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-black) !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: var(--transition);
+}
+
+.mailto_fallback_btn:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.fallback_note {
+  font-size: 0.82rem;
+  color: #aaa;
+}
+
+.fallback_note a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* ─── Responsive ────────────────────────────────────────────────── */

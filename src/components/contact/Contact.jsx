@@ -7,13 +7,15 @@ import { BsWhatsapp } from 'react-icons/bs';
 
 import emailjs from '@emailjs/browser';
 
+const MY_EMAIL = 'mahmoudsaidmansour1000@gmail.com';
+
 const ContactData = [
   {
     id: 1,
     icon: <MdOutlineEmail />,
     title: "Email",
-    info: "mahmoudsaidmansour1000@gmail.com",
-    link: "mailto:mahmoudsaidmansour1000@gmail.com",
+    info: MY_EMAIL,
+    link: `mailto:${MY_EMAIL}`,
   },
   {
     id: 2,
@@ -44,45 +46,50 @@ const EMAILJS_PUBLIC_KEY  = 'q0kIt_yepoFXbETEj';
 
 function Contact() {
   const form = useRef();
-  const [status, setStatus]   = useState(STATUS.IDLE);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [status, setStatus]     = useState(STATUS.IDLE);
+  const [fallbackHref, setFallbackHref] = useState('');
+
+  // Build a mailto: fallback using whatever the user typed
+  const buildMailtoFallback = (nameVal, emailVal, messageVal) => {
+    const subject = encodeURIComponent(`Portfolio Contact from ${nameVal}`);
+    const body    = encodeURIComponent(
+      `Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`
+    );
+    return `mailto:${MY_EMAIL}?subject=${subject}&body=${body}`;
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Use form.elements to safely access named inputs
     const nameVal    = form.current.elements['name']?.value?.trim()    ?? '';
     const emailVal   = form.current.elements['email']?.value?.trim()   ?? '';
     const messageVal = form.current.elements['message']?.value?.trim() ?? '';
 
-    // Client-side validation
     if (!nameVal || !emailVal || !messageVal) {
       setStatus(STATUS.ERROR);
-      setErrorMsg('Please fill in all fields.');
+      setFallbackHref('');
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailVal)) {
       setStatus(STATUS.ERROR);
-      setErrorMsg('Please enter a valid email address.');
+      setFallbackHref('');
       return;
     }
 
     setStatus(STATUS.LOADING);
-    setErrorMsg('');
 
-    // Use emailjs.send() with explicit template params for reliability
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
       {
-        from_name: nameVal,
+        from_name:  nameVal,
         from_email: emailVal,
-        name:    nameVal,
-        email:   emailVal,
-        message: messageVal,
-        reply_to: emailVal,
+        name:       nameVal,
+        email:      emailVal,
+        message:    messageVal,
+        reply_to:   emailVal,
       },
       EMAILJS_PUBLIC_KEY
     ).then(
@@ -93,13 +100,10 @@ function Contact() {
       },
       (error) => {
         console.error('EmailJS error:', error);
+        // Build a mailto fallback so the user can still reach out
+        const href = buildMailtoFallback(nameVal, emailVal, messageVal);
+        setFallbackHref(href);
         setStatus(STATUS.ERROR);
-        const detail = error?.text || error?.message || '';
-        setErrorMsg(
-          detail
-            ? `Failed to send: ${detail}`
-            : 'Could not send your message. Please email me directly at mahmoudsaidmansour1000@gmail.com'
-        );
       }
     );
   };
@@ -164,10 +168,24 @@ function Contact() {
               ✅ Message sent successfully! I'll get back to you soon.
             </p>
           )}
+
           {status === STATUS.ERROR && (
-            <p className="status_message status_error">
-              ❌ {errorMsg}
-            </p>
+            <div className="status_message status_error">
+              {fallbackHref ? (
+                <>
+                  <p>⚠️ Couldn't send via the form right now.</p>
+                  <a href={fallbackHref} className="mailto_fallback_btn">
+                    📧 Click here to send via your Email app instead
+                  </a>
+                  <p className="fallback_note">
+                    Or email me directly at{' '}
+                    <a href={`mailto:${MY_EMAIL}`}>{MY_EMAIL}</a>
+                  </p>
+                </>
+              ) : (
+                <p>❌ Please fill in all fields with a valid email address.</p>
+              )}
+            </div>
           )}
         </form>
       </div>
