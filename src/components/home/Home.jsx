@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import Me from '../../assets/me1.png'
 import CVPage1 from '../../assets/cv1.png'
-import CVPage2 from '../../assets/cv2.png'
-import CVPage3 from '../../assets/cv3.png'
 import './home.css'
 import HomeSocials from './HomeSocials'
 
-const CV_PDF_URL = import.meta.env.BASE_URL + 'Mahmoud_CV.pdf'
+const CV_DRIVE_URL = 'https://drive.google.com/file/d/1EWHvDw-JMZcB6yswhog5hff8w89pGPuz/view?usp=sharing'
 
 function Home() {
   const [lightboxImg, setLightboxImg] = useState(null)
@@ -51,27 +49,19 @@ function Home() {
       {/* ===== CV Section ===== */}
       <div id="cv-section" className="cv-section">
         <h2>My CV</h2>
-        <p className="cv-hint">Click any page to view full size</p>
+        <p className="cv-hint">Click to view full size</p>
         <div className="cv-cards">
           <div className="cv-card" onClick={() => openLightbox(CVPage1)}>
-            <h3>Page 1</h3>
-            <img src={CVPage1} alt="CV Page 1" />
-          </div>
-          <div className="cv-card" onClick={() => openLightbox(CVPage2)}>
-            <h3>Page 2</h3>
-            <img src={CVPage2} alt="CV Page 2" />
-          </div>
-          <div className="cv-card" onClick={() => openLightbox(CVPage3)}>
-            <h3>Page 3</h3>
-            <img src={CVPage3} alt="CV Page 3" />
+            <img src={CVPage1} alt="Mahmoud Saeed CV" />
           </div>
         </div>
 
         {/* Download Button */}
         <div className="download-btn">
           <a
-            href={CV_PDF_URL}
-            download="Mahmoud_Saeed_CV.pdf"
+            href={CV_DRIVE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-black"
           >
             ⬇ Download CV

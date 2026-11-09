@@ -1,0 +1,90 @@
+%-------------------------
+% Resume in Latex
+% Author : Audric Serador
+% Inspired by: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{paracol}
+\input{glyphtounicode}
+
+% Custom font
+\usepackage[default]{lato}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\textheight}{1.8in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\input{custom-commands}
+
+\begin{document}
+
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
+
+%----------HEADING (full width)----------%
+\input{src/heading}
+
+\vspace{1pt}
+
+%------ TWO-COLUMN LAYOUT ------%
+\setlength{\columnsep}{16pt}
+\setlength{\columnseprule}{0.4pt}
+\columnratio{0.29}
+\begin{paracol}{2}
+\sloppy
+
+%----- LEFT COLUMN -----%
+\input{src/education.tex}
+\input{src/experience}
+\input{src/training}
+\input{src/skills.tex}
+\input{src/languages}
+
+\switchcolumn
+
+%----- RIGHT COLUMN -----%
+\input{src/projects}
+\input{src/graduation}
+
+\end{paracol}
+
+%-------------------------------------------%
+\end{document}
